@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Meseum of Candy</title>
+    <link rel="icon" href="imgs/favicon.png">
+</head>
+
+<body>
+    
+    <main>
+        <nav class="MainNavbar" role="navigation" aria-label="main navigation">
+            <div class="nav-top">
+                <a href="#" class="navbar-brand">candy</a>
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            <ul class="navbar">
+                <li class="navbar-item"><a class="navbar-link" href="/index.html">home</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/index.html">about</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/index.html">tickets</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="heading-group">
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+                <h1>museum<span>/</span>of<span>/</span>candy</h1>
+            </div>
+            <div class="image-section">
+                <img src="imgs/hand2.png" alt="Hand holding Candy">
+            </div>
+        </section>
+
+
+        <section class="margin-top mob-view">
+            <div class="image-section">
+                <img src="imgs/milk.png" alt="milkjar bottle with a donut">
+            </div>
+            <div class="content-section">
+                <h2>museum of candy</h2>
+                <img src="imgs/lolli_icon.png" alt="" class="icon">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat inventore eligendi quidem minus
+                    nesciunt, at doloribus voluptatem delectus dignissimos quis quo quisquam voluptatibus cumque ad
+                    neque repudiandae labore explicabo minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dicta harum alias accusantium iusto aliquam necessitatibus obcaecati reiciendis in</p>
+            </div>
+        </section>
+
+
+        <section class="margin-top">
+            <div class="content-section">
+                <h2>museum of candy</h2>
+                <img src="imgs/lolli_icon.png" alt="" class="icon">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat inventore eligendi quidem minus
+                    nesciunt, at doloribus voluptatem delectus dignissimos quis quo quisquam voluptatibus cumque ad
+                    neque repudiandae labore explicabo minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dicta harum alias accusantium iusto aliquam necessitatibus obcaecati reiciendis in</p>
+            </div>
+            <div class="image-section">
+                <img src="imgs/gumball.png" alt="gumball">
+            </div>
+        </section>
+
+
+        <section class="margin-top margin-bottom mob-view">
+            <div class="image-section">
+                <img src="imgs/sprinkles.png" alt="sprinkles in a glass">
+            </div>
+            <div class="content-section">
+                <h2>museum of candy</h2>
+                <img src="imgs/lolli_icon.png" alt="" class="icon">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat inventore eligendi quidem minus
+                    nesciunt, at doloribus voluptatem delectus dignissimos quis quo quisquam voluptatibus cumque ad
+                    neque repudiandae labore explicabo minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dicta harum alias accusantium iusto aliquam necessitatibus obcaecati reiciendis in</p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <script>
+        // Scroll background logic
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".MainNavbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        // Toggle mobile menu
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navbarMenu = document.querySelector('.navbar');
+
+        toggleButton.addEventListener('click', () => {
+            navbarMenu.classList.toggle('show');
+            toggleButton.classList.toggle('open');
+
+            // toggle-menu ARIA
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+        });
+    </script>
+</body>
+
+</html>

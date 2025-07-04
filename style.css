@@ -1,0 +1,273 @@
+/* -----------------------------------
+   RESET & GLOBAL STYLES
+----------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 100;
+    background-color: #f5d9d5;
+    margin: 0;
+}
+
+/* -----------------------------------
+   NAVBAR STYLES
+----------------------------------- */
+
+.MainNavbar {
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+    position: fixed;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* Brand / Logo */
+.navbar-brand {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ea1c2c;
+    font-size: 1.25rem;
+    margin-right: 1.2rem;
+}
+
+/* Main navigation links */
+.navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    text-transform: uppercase;
+    list-style-type: none;
+    margin-right: 1rem;
+}
+
+.navbar-link:hover {
+    color: #ea1c2c;
+    cursor: pointer;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Mobile toggle button (hamburger menu) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bar {
+    width: 100%;
+    height: 0.125rem;
+    background-color: #ea1c2c;
+    border-radius: 0.125rem;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation to X */
+.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Navbar style after scrolling */
+.scrolled {
+    background-color: #DEC0DE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 500ms box-shadow 300ms;
+}
+
+
+
+/* -----------------------------------
+   PAGE SECTIONS
+----------------------------------- */
+
+section {
+    display: flex;
+}
+
+/* Utility margin classes */
+.margin-top {
+    margin-top: 6.25rem;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
+}
+
+/* -----------------------------------
+   HEADING GROUP
+----------------------------------- */
+
+.heading-group {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 0 0;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0rem 0;
+}
+
+span {
+    color: #ea1c2c;
+}
+
+/* -----------------------------------
+   IMAGE & TEXT SECTION
+----------------------------------- */
+
+/* Image side of the section */
+.image-section {
+    width: 50%;
+}
+
+/* Text content side of the section */
+.content-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+}
+
+/* Heading inside content section */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #ea1c2c;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Paragraph text styling */
+p {
+    text-align: center;
+    color: #f498b8;
+    font-size: 1.125rem;
+    line-height: 2;
+    width: 66%;
+    margin: 0;
+}
+
+
+/* -----------------------------------
+   RESPONSIVE DESIGN (MAX-WIDTH: 768px)
+----------------------------------- */
+
+@media (max-width: 48rem) {
+
+     /* Stack navbar items vertically */
+    .MainNavbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    /* Hide navbar menu by default on mobile */
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        line-height: 2;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        /* background-color: #DEC0DE; */
+    }
+
+    /* Stack sections vertically */
+    section {
+        flex-direction: column;
+    }
+
+    /* Mobile view: reverse image/text order */
+    .mob-view {
+        flex-direction: column-reverse;
+    }
+
+    /* Hide large heading and icon in mobile */
+    .heading-group,
+    .icon {
+        display: none;
+    }
+
+    /* Expand full width for content and image */
+    .image-section,
+    .content-section {
+        width: 100%;
+    }
+
+    h2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    p {
+        width: 85%;
+        margin-bottom: 3rem;
+    }
+
+     /* When menu is shown */
+    .show {
+        max-height: 18.75rem;
+        /* enough to reveal all links */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
