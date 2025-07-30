@@ -52,8 +52,8 @@ museum-of-candy/
 ├── index.html
 ├── style. css
 ├── script. js
-└── assets/
-    └── images/
+└── imgs/
+    └── images.png's
 
 
 ---
