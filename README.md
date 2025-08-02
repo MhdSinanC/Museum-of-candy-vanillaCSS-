@@ -1,4 +1,3 @@
-Sure! Here's your complete README.md content in a single file, ready to copy and paste:
 
 # 🍭 Museum of Candy
 
